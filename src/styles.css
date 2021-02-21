@@ -12,12 +12,11 @@ body {
 
 .dog-title {
     color: #390099;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .dog-info {
     color: #9e0059;
-    font-size: 15px;
     font-family: 'Gruppo', cursive;
 }
 
@@ -28,6 +27,26 @@ body {
 
 .card-img-top {
     width: 100%;
-    height: 15vw;
+    height: 200px;
     object-fit: cover;
+}
+
+.card-body {
+    width: 100%;
+    height: 125px
+}
+
+.breed {
+    font-size: 20px
+}
+
+.size {
+    font-size: 15px;
+    color: #ffbd00
+}
+
+.card-deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: .5rem;
 }
