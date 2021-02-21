@@ -4,9 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Resources from './components/Resources';
 import About from './components/About'
 import BaseLayout from './components/layout/BaseLayout'
+import  './styles.css'
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
-import reducer from './reducers/reducerTemplate'
+// import reducer from './reducers/reducerTemplate'
 import App from './App';
 import {
   BrowserRouter as Router,
@@ -39,16 +40,16 @@ const loadFromLocalStorage = (params) => {
 const persistedState = loadFromLocalStorage();
 
 //Initializing REDUX store
-let store = createStore(reducer, persistedState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+// let store = createStore(reducer, persistedState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
-store.subscribe(()=>{
+// store.subscribe(()=>{
 
-  saveToLocalStorage(store.getState());
-})
+  // saveToLocalStorage(store.getState());
+// })
 //Provider hooks react to redux
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
+    {/* <Provider store={store}> */}
     <Router>
       <BaseLayout>
         <Switch>
@@ -58,7 +59,7 @@ ReactDOM.render(
         </Switch>
       </BaseLayout>
     </Router>
-    </Provider>
+    {/* </Provider> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

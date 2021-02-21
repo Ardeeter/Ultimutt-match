@@ -5,8 +5,10 @@ import { Link } from 'react-router-dom'
 const Header = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-  <Link className="navbar-brand" to="#">Navbar</Link>
+      <nav className="navbar navbar-expand-lg navbar-light bg-white border border-dark">
+  <Link className="navbar-brand" to="#">
+    <div className="logo dog-title">Ultimutt <img src="./images/icon.jpg" height="30px" alt=""/> Match</div>
+    </Link>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
   </button>
