@@ -1,22 +1,34 @@
 import React from 'react';
 import { useSelector } from "react-redux";
+import API from './API';
 import DogModal from './DogModal';
+import ZipCode from './ZipCode';
 
 export default function DogCard () {
 
 
     const dogs = useSelector(state => state.dogs);
 
+    // const handleClick = (dog) => {
 
+    //     setCurrentDog(dog)
+    
+    //     console.log(dog);
+        
+    //   }
+    
+    //   console.log(currentDog);
 
 
   return (
     <>
+    <API />
+    <ZipCode />
     <div className="card-deck p-3 m-0">
       {dogs.map((dog) => {
         return (
 
-            <div className="card card-bg m-2">
+            <div className="card card-bg m-2" key={dog.id}>
                 <img src={dog.picture} alt="" className="card-img-top"/>
                 <div className="card-body">
                     <h5 className="card-title dog-title logo text-center m-1 p-0">{dog.name}</h5>

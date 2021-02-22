@@ -19,10 +19,18 @@ const reducer = (state = initialState, action) => {
 
     switch (action.type) {
 
-        case "ADD" : 
+        case "ADD_DOG" : 
+
             return {
                 ...state,
                 dogs: [...state.dogs, action.data]
+            }
+        
+        case "CHANGE_LOCATION" :
+
+            return {
+                ...state,
+                location: [action.data]
             }
         
         default:

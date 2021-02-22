@@ -40,12 +40,13 @@ const loadFromLocalStorage = (params) => {
 const persistedState = loadFromLocalStorage();
 
 //Initializing REDUX store
-let store = createStore(reducer, persistedState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+let store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 store.subscribe(()=>{
 
   saveToLocalStorage(store.getState());
 })
+
 //Provider hooks react to redux
 ReactDOM.render(
   <React.StrictMode>
