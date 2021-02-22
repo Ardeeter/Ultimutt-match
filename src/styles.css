@@ -1,5 +1,8 @@
 body {
-    background-color: #ff0054;
+    /* background-color: #ff0054; */
+    /* background-color: #ffbd00; */
+    /* background-color: #fbb017; */
+    background-color: #f8f7f7;
 }
 
 .logo {
@@ -7,16 +10,19 @@ body {
 }
 
 .card-bg {
-    background-color: #ffbd00;
+    background-color: white;
 }
 
 .dog-title {
-    color: #390099;
+    /* color: #390099; */
+    color: #ad7d38;
     font-size: 25px;
 }
 
 .dog-info {
-    color: #9e0059;
+    /* color: #9e0059; */
+    /* color: #ff5c61; */
+    color: #09344f;
     font-family: 'Gruppo', cursive;
 }
 
@@ -42,11 +48,30 @@ body {
 
 .size {
     font-size: 15px;
-    color: #ffbd00
+    /* color: #ffbd00 */
+    /* color: #23d16c */
+    color: #ca9238
 }
 
 .card-deck {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: .5rem;
+}
+
+.nav-link {
+    font-family: 'Gruppo', cursive;
+
+}
+
+.nav-logo {
+    /* color: #9e0059; */
+    font-size: 25px;
+    /* color: #390099; */
+    color: #3a6fa1;
+}
+
+.card-deck {
+    height: 100%;
+    width: 100%
 }
