@@ -17,27 +17,7 @@ export default function API () {
         const response = await fetch (url)
         const data = await response.json()
         console.log(data)
-
-        data.forEach((dog) => {
-
-            let dogObj = {
-                id: uuidv1(),
-                name: dog.name,
-                gender: dog.gender,
-                breed: dog.breed,
-                age: dog.age,
-                size: dog.size,
-                location: dog.location,
-                bio: dog.bio,
-                contact: dog.contact,
-                picture: dog.picture
-            }
-
-            if ((dogs.length < 11)){
-                dispatch(addDog(dogObj))
-            }
-        })
-        
+        dispatch(addDog(data))  
     } 
 
     useEffect(() => {

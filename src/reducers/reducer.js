@@ -1,18 +1,7 @@
 
 const initialState = {
     location: ["93101"],
-    dogs: [{
-        id: 1,
-        name: "Buddha",
-        gender: "Male",
-        breed: "Husky Pit",
-        age: "Adult",
-        size: "Large",
-        location: "93101",
-        bio: "Buddha is the world's best (but craziest) dog.",
-        contact: "adoptbuddha@ultimuttmatch.com",
-        picture: "./images/buddha.jpg"
-    }]
+    dogs: []
 };
 
 const reducer = (state = initialState, action) => {
@@ -20,14 +9,14 @@ const reducer = (state = initialState, action) => {
     switch (action.type) {
 
         case "ADD_DOG" : 
+        console.log('ADDING', action.data)
 
             return {
                 ...state,
-                dogs: [...state.dogs, action.data]
+                dogs: action.data
             }
         
         case "CHANGE_LOCATION" :
-
             return {
                 ...state,
                 location: [action.data]

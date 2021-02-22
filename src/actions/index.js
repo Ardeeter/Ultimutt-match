@@ -1,9 +1,9 @@
 
-export const addDog = (dog) => {
+export const addDog = (data) => {
 
     return {
         type: "ADD_DOG",
-        data: dog
+        data
     }
 }
 

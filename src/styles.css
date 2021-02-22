@@ -3,6 +3,8 @@ body {
     /* background-color: #ffbd00; */
     /* background-color: #fbb017; */
     background-color: #f8f7f7;
+    margin: 0;
+    padding: 0
 }
 
 .logo {
@@ -74,4 +76,8 @@ body {
 .card-deck {
     height: 100%;
     width: 100%
+}
+
+.submit-button{
+    background-color: #638fb8;
 }
