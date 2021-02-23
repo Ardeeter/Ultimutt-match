@@ -1,6 +1,10 @@
 
 const initialState = {
     location: ["93101"],
+    breed: [],
+    gender: [],
+    age: [],
+    size: [],
     dogs: []
 };
 
@@ -20,6 +24,30 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 location: [action.data]
+            }
+
+        case "CHANGE_BREED" :
+            return {
+                ...state,
+                breed: [action.data]
+            }
+        
+        case "CHANGE_GENDER" :
+            return {
+                ...state,
+                gender: [action.data]
+            }
+        
+        case "CHANGE_AGE" :
+            return {
+                ...state,
+                age: [action.data]
+            }
+        
+        case "CHANGE_SIZE" :
+            return {
+                ...state,
+                size: [action.data]
             }
         
         default:

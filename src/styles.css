@@ -4,11 +4,13 @@ body {
     /* background-color: #fbb017; */
     background-color: #f8f7f7;
     margin: 0;
-    padding: 0
+    padding: 0;
+
 }
 
 .logo {
     font-family: 'Hachi Maru Pop', cursive;
+    font-size: 50px;
 }
 
 .card-bg {
@@ -29,7 +31,7 @@ body {
 }
 
 .contact {
-    font-size: 10px;
+    font-size: 12px;
     font-family: 'Gruppo', cursive;
 }
 
@@ -81,3 +83,20 @@ body {
 .submit-button{
     background-color: #638fb8;
 }
+
+.modal-info {
+    font-family: 'Gruppo', cursive;
+}
+
+.modal-title {
+    width: 100%;
+    font-size: 40px;
+    font-family: 'Hachi Maru Pop', cursive;
+}
+
+.modal-bio {
+    font-size: 20px
+}
+
+
+

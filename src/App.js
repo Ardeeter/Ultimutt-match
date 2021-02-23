@@ -1,16 +1,12 @@
-import React from 'react';
-import { useState, useEffect } from "react";
-import DogCard from './components/DogCard';
+import React from 'react'
+// import Photo from '../images/background.jpg';
 
-export default function App () {
-
-
+const App = () => {
   return (
     <>
-    <div>
-      <DogCard />
-    </div>
+      {/* <img src={Photo} alt=""/> */}
     </>
-  );
+  )
 }
 
+export default App

@@ -14,3 +14,35 @@ export const changeLocation = (zipcode) => {
         data: zipcode
     }
 }
+
+export const changeBreed = (breed) => {
+
+    return {
+        type: "CHANGE_BREED",
+        data: breed
+    }
+}
+
+export const changeGender = (gender) => {
+
+    return {
+        type: "CHANGE_BREED",
+        data: gender
+    }
+}
+
+export const changeAge = (age) => {
+
+    return {
+        type: "CHANGE_BREED",
+        data: age
+    }
+}
+
+export const changeBreed = (size) => {
+
+    return {
+        type: "CHANGE_BREED",
+        data: size
+    }
+}

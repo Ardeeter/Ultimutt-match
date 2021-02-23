@@ -9,6 +9,7 @@ import {createStore} from 'redux'
 import {Provider} from 'react-redux'
 import reducer from './reducers/reducer'
 import App from './App';
+import DogList from './components/DogList'
 import {
   BrowserRouter as Router,
   Route, Switch
@@ -55,6 +56,7 @@ ReactDOM.render(
       <BaseLayout>
         <Switch>
           <Route exact path="/" component={App} />
+          <Route path="/dogs" component={DogList} />
           <Route path="/resources" component={Resources} />
           <Route path="/about" component={About} />
         </Switch>
