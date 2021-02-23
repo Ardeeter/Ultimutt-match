@@ -4,7 +4,7 @@ import { addDog, changeLocation, changeBreed, changeGender, changeAge, changeSiz
 import { useHistory, withRouter } from "react-router-dom";
 
 
-const Filter = () => {
+const Filter = ({close}) => {
 
     const location = useSelector(state => state.location);
     const breed = useSelector(state => state.breed);
@@ -32,6 +32,7 @@ const Filter = () => {
         dispatch(addDog(filteredData))
 
         history.push('/dogs')
+        close()
 
 
 
