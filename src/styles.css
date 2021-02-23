@@ -2,7 +2,8 @@ body {
     /* background-color: #ff0054; */
     /* background-color: #ffbd00; */
     /* background-color: #fbb017; */
-    background-color: #f8f7f7;
+    /* background-color: #f8f7f7; */
+    background-color: white;
     margin: 0;
     padding: 0;
 
@@ -14,7 +15,7 @@ body {
 }
 
 .card-bg {
-    background-color: white;
+    background-color: rgb(243, 241, 241);
 }
 
 .dog-title {
@@ -80,7 +81,7 @@ body {
     width: 100%
 }
 
-.submit-button{
+.submit-button {
     background-color: #638fb8;
 }
 
@@ -96,6 +97,46 @@ body {
 
 .modal-bio {
     font-size: 20px
+}
+
+.filter-titles {
+    font-size: 20px;
+    font-family: 'Gruppo', cursive;
+}
+
+.start-button {
+    background-color: #ca9238;
+    color: white;
+    font-size: 30px;
+    font-family: 'Gruppo', cursive;
+}
+
+.landing-img {
+    width: 100vw
+}
+
+.header-img {
+    height:400px;
+    width:100%
+}
+
+.bg-white {
+    background-color: white;
+    width: 100%
+}
+
+.title {
+    color: #aaaaaa;
+    text-shadow: 2px 2px #0b3e6d;
+    font-family: 'Gruppo', cursive;
+}
+
+.filter-button {
+    background-color: #ca9238;
+    color: white;
+    font-size: 25px;
+    font-family: 'Gruppo', cursive;
+    border-color: #b9842f
 }
 
 

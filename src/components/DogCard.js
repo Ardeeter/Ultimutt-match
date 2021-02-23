@@ -24,8 +24,8 @@ export default function DogCard () {
 
   return (
     <>
-    <API />
-    <ZipCode />
+    {/* <API /> */}
+    {/* <ZipCode /> */}
     <div className="card-deck p-3 m-0">
       {dogs.map((dog) => {
         return (

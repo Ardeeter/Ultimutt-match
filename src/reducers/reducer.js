@@ -1,11 +1,11 @@
 
 const initialState = {
-    location: ["93101"],
-    breed: [],
-    gender: [],
-    age: [],
-    size: [],
-    dogs: []
+    location: [""],
+    breed: [""],
+    gender: [""],
+    age: [""],
+    size: [""],
+    dogs: [""]
 };
 
 const reducer = (state = initialState, action) => {

@@ -26,7 +26,7 @@ export const changeBreed = (breed) => {
 export const changeGender = (gender) => {
 
     return {
-        type: "CHANGE_BREED",
+        type: "CHANGE_GENDER",
         data: gender
     }
 }
@@ -34,15 +34,15 @@ export const changeGender = (gender) => {
 export const changeAge = (age) => {
 
     return {
-        type: "CHANGE_BREED",
+        type: "CHANGE_AGE",
         data: age
     }
 }
 
-export const changeBreed = (size) => {
+export const changeSize = (size) => {
 
     return {
-        type: "CHANGE_BREED",
+        type: "CHANGE_SIZE",
         data: size
     }
 }
