@@ -54,3 +54,11 @@ export const AddLikedDog = (dog) => {
         data: dog
     }
 }
+
+export const RemoveLikedDog = (id) => {
+
+    return {
+        type: "REMOVE_LIKED_DOG",
+        id: id
+    }
+}

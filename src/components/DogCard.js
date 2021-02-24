@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import API from './API';
 import DogModal from './DogModal';
 import ZipCode from './ZipCode';
-import { AddLikedDog } from '../actions/index'
+import { AddLikedDog, RemoveLikedDog } from '../actions/index'
 
 
 export default function DogCard () {
@@ -34,6 +34,10 @@ export default function DogCard () {
             dispatch(AddLikedDog(dog))
         }
     }
+
+    const handleUnlike = (dog) => {
+        dispatch(RemoveLikedDog(dog.id))
+    }
     
 
 
@@ -49,7 +53,7 @@ export default function DogCard () {
 
             <div className="card card-bg m-2" key={dog.id}>
                 <div className="card-img-top">
-                    <a className="heart btn" onClick={(e) => {handleLike(dog)}}><i className="fa fa-heart"></i></a>
+                  {dog.id in likedDogs ? <a className="heart-clicked btn" onClick={(e) => {handleUnlike(dog)}}><i className="fa fa-heart"></i></a> : <a className="heart-unclicked btn" onClick={(e) => {handleLike(dog)}}><i className="fa fa-heart"></i></a>}
                     <img src={dog.picture} alt="" className="card-img-top img-card" onClick={() => handleClick(dog)}/>
                 </div>
                 <div className="card-body" onClick={() => handleClick(dog)}>
@@ -60,7 +64,7 @@ export default function DogCard () {
                     </div>
                 </div>
                 <div className="card-footer text-center">
-                    <small className="text-muted contact"><Link to={email}> {dog.contact} </Link></small>
+                    <small className="text-muted contact"><a href={email}> {dog.contact} </a></small>
                 </div>
             </div>
 

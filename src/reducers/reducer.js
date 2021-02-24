@@ -58,6 +58,12 @@ const reducer = (state = initialState, action) => {
                 liked: [...state.liked, action.data]
             }
         
+        case "REMOVE_LIKED_DOG" :
+            return{
+                ...state,
+                liked: state.liked.filter(liked => liked.id !== action.id)
+            }
+        
         default:
             return state    
         

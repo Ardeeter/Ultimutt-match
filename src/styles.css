@@ -126,9 +126,10 @@ body {
 }
 
 .header-img {
-    height:400px;
+    height: auto;
     width:100%;
     z-index: 1;
+    margin-top: 100px;
 }
 
 .bg-white {
@@ -173,23 +174,42 @@ body {
     z-index: 0;
   }
   
-  .heart {
+  .heart-unclicked {
     position: absolute;
     right: 0; top: 0;
     padding: 3px 8px;
-    color: #fff;
+    color: #fae2bd;
+
     z-index: 1;
     font-size: 25px;
-    text-shadow: #ad7d38
+    text-shadow: -1px 1px 0 #ad7d38,
+    1px 1px 0 #ad7d38,
+   1px -1px 0 #ad7d38,
+  -1px -1px 0 #ad7d38;
     
   }
 
-.heart:hover {
+  .heart-clicked {
+    position: absolute;
+    right: 0; top: 0;
+    padding: 3px 8px;
+    color: #ad7d38;
+
+    z-index: 1;
+    font-size: 25px;
+    text-shadow: -1px 1px 0 #fae2bd,
+    1px 1px 0 #fae2bd,
+   1px -1px 0 #fae2bd,
+  -1px -1px 0 #fae2bd;
+    
+  }
+
+.heart-unclicked:hover {
     color: #ca9238
 }
 
-.heart:visited {
-    color: 2px #ca9238
+.heart-clicked:hover {
+    color: #ca9238
 }
 
 /* .heart:focus{
@@ -223,7 +243,7 @@ body {
 }
 
 .ft-con {
-    z-index: 0;
+    z-index: 2;
 }
 
 .app-container{

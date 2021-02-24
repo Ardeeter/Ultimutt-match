@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <>
-      <div className="position-sticky ft-con">
+      <div className="fixed-bottom ft-con ">
         <div className="footer-bar"></div>
         <div className="footer-container border border-dark justify-content-center align-items-center">
 
