@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Resources from './components/Resources';
+import LikedDogs from './components/LikedDogs';
 import About from './components/About'
 import BaseLayout from './components/layout/BaseLayout'
 import  './styles.css'
@@ -57,7 +57,7 @@ ReactDOM.render(
         <Switch>
           <Route exact path="/" component={App} />
           <Route path="/dogs" component={DogList} />
-          <Route path="/resources" component={Resources} />
+          <Route path="/liked" component={LikedDogs} />
           <Route path="/about" component={About} />
         </Switch>
       </BaseLayout>

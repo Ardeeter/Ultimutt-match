@@ -1,48 +1,37 @@
-import React, {useState} from 'react';
-import { useDispatch, useSelector } from "react-redux";
+import React, {useState} from 'react'
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from 'react-router-dom';
-import API from './API';
 import DogModal from './DogModal';
-import ZipCode from './ZipCode';
-import { AddLikedDog } from '../actions/index'
 
+const Resources = () => {
 
-export default function DogCard () {
+  const likedDogs = useSelector(state => state.liked)
 
-    
+  const [show, setShow] = useState(false);
+  const [currentDog, setCurrentDog] = useState(false);
 
-    const dogs = useSelector(state => state.dogs);
-    const likedDogs = useSelector(state => state.liked)
+  const dispatch = useDispatch();
 
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
-    const [show, setShow] = useState(false);
-    const [currentDog, setCurrentDog] = useState(false);
+  const handleClick = (dog) => {
+    setCurrentDog(dog)
+    handleShow()     
+  }
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
-    const dispatch = useDispatch();
-
-    const handleClick = (dog) => {
-        setCurrentDog(dog)
-        handleShow()     
-      }
-
-    const handleLike = (dog) => {
-        console.log(likedDogs);
-        if (!(dog.id in likedDogs)){
-            dispatch(AddLikedDog(dog))
-        }
-    }
-    
+  const handleLike = (dog) => {
+    // console.log(likedDogs);
+    // if (!(dog.id in likedDogs)){
+    //     dispatch(AddLikedDog(dog))
+    // }
+}
 
 
   return (
     <>
-    {/* <API /> */}
-    {/* <ZipCode /> */}
-    <div className="card-deck p-3 m-0">
-      {dogs.map((dog) => {
+       <div className="card-deck p-3 m-0">
+      {likedDogs.map((dog) => {
           const email = `mailto:${dog.contact}`
 
         return (
@@ -71,5 +60,7 @@ export default function DogCard () {
     </div>
     <DogModal show={show} handleClose={handleClose} handleShow={handleShow} dog={currentDog}/>
     </>
-  );
+  )
 }
+
+export default Resources

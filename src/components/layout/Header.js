@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom'
 const Header = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-white border border-dark">
+
+      <nav className="navbar navbar-expand-lg navbar-light bg-white border border-dark">  
   <Link className="navbar-brand" to="/">
     <div className="logo nav-logo font-weight-bold">Ultimutt <img src="./images/icon.jpg" height="30px" alt=""/> Match</div>
     </Link>
@@ -15,10 +16,10 @@ const Header = () => {
   <div className="collapse navbar-collapse" id="navbarNav">
     <ul className="navbar-nav ml-auto">
       <li className="nav-item active">
-        <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
+        <Link className="nav-link" to="/dogs">Home <span className="sr-only">(current)</span></Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/resourses">Resources</Link>
+        <Link className="nav-link" to="/liked">Favorites</Link>
       </li>
       <li className="nav-item">
         <Link className="nav-link" to="/aboutme">About</Link>

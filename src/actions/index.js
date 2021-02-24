@@ -46,3 +46,11 @@ export const changeSize = (size) => {
         data: size
     }
 }
+
+export const AddLikedDog = (dog) => {
+
+    return {
+        type: "ADD_LIKED_DOG",
+        data: dog
+    }
+}

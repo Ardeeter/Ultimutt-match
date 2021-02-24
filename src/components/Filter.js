@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { addDog, changeLocation, changeBreed, changeGender, changeAge, changeSize } from '../actions';
-import { useHistory, withRouter } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 
 const Filter = ({close}) => {
@@ -128,7 +128,10 @@ const Filter = ({close}) => {
                         <option value="Large">Large</option>
                     </select>
                 </div>
-                <button type="submit" className="btn submit-button" onSubmit={(e)=>handleSubmit(e)}>Submit</button>
+                <div className="d-flex justify-content-end">
+                    <button type="submit" className="btn submit-button" onSubmit={(e)=>handleSubmit(e)}>Submit</button>
+                    <button type="close" className="btn close-button ml-2">Close</button>
+                </div>
             </form>
         </div>
     </>

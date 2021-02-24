@@ -5,7 +5,8 @@ const initialState = {
     gender: [""],
     age: [""],
     size: [""],
-    dogs: [""]
+    dogs: [""],
+    liked: []
 };
 
 const reducer = (state = initialState, action) => {
@@ -48,6 +49,13 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 size: [action.data]
+            }
+
+        case "ADD_LIKED_DOG" :
+            console.log("liked", state.liked);
+            return {
+                ...state,
+                liked: [...state.liked, action.data]
             }
         
         default:
