@@ -1,15 +1,10 @@
 import React, {useState} from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from 'react-router-dom';
-import API from './API';
 import DogModal from './DogModal';
-import ZipCode from './ZipCode';
 import { AddLikedDog, RemoveLikedDog } from '../actions/index'
 
 
-export default function DogCard () {
-
-    
+export default function DogCard () {  
 
     const dogs = useSelector(state => state.dogs);
     const likedDogs = useSelector(state => state.liked)
@@ -30,6 +25,8 @@ export default function DogCard () {
 
     const handleLike = (dog) => {
         console.log(likedDogs);
+        console.log(dog.id)
+        console.log("dog", dog)
         if (!(dog.id in likedDogs)){
             dispatch(AddLikedDog(dog))
         }
@@ -38,22 +35,21 @@ export default function DogCard () {
     const handleUnlike = (dog) => {
         dispatch(RemoveLikedDog(dog.id))
     }
-    
-
 
   return (
     <>
-    {/* <API /> */}
-    {/* <ZipCode /> */}
     <div className="card-deck p-3 m-0">
       {dogs.map((dog) => {
           const email = `mailto:${dog.contact}`
-
+          
+          const likedDog = likedDogs.find((d) => d.id === dog.id )
+          console.log(likedDog)
+          
         return (
 
             <div className="card card-bg m-2" key={dog.id}>
                 <div className="card-img-top">
-                  {dog.id in likedDogs ? <a className="heart-clicked btn" onClick={(e) => {handleUnlike(dog)}}><i className="fa fa-heart"></i></a> : <a className="heart-unclicked btn" onClick={(e) => {handleLike(dog)}}><i className="fa fa-heart"></i></a>}
+                  {likedDog ? <span className="heart-clicked" onClick={(e) => {handleUnlike(dog)}}><i className="fa fa-paw"></i></span> : <span className="heart-unclicked" onClick={(e) => {handleLike(dog)}}><i className="fa fa-paw"></i></span>}
                     <img src={dog.picture} alt="" className="card-img-top img-card" onClick={() => handleClick(dog)}/>
                 </div>
                 <div className="card-body" onClick={() => handleClick(dog)}>

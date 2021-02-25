@@ -52,7 +52,6 @@ const reducer = (state = initialState, action) => {
             }
 
         case "ADD_LIKED_DOG" :
-            console.log("liked", state.liked);
             return {
                 ...state,
                 liked: [...state.liked, action.data]

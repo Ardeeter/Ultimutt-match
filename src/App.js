@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-import Filter from './components/Filter'
 import ModalFilter from './components/ModalFilter';
-// import Photo from '../images/background.jpg';
 
 const App = () => {
 

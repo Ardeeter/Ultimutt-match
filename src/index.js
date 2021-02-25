@@ -41,7 +41,7 @@ const loadFromLocalStorage = (params) => {
 const persistedState = loadFromLocalStorage();
 
 //Initializing REDUX store
-let store = createStore(reducer, persistedState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+let store = createStore(reducer, persistedState,  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 store.subscribe(()=>{
 
@@ -58,7 +58,7 @@ ReactDOM.render(
           <Route exact path="/" component={App} />
           <Route path="/dogs" component={DogList} />
           <Route path="/liked" component={LikedDogs} />
-          <Route path="/about" component={About} />
+          <Route path="/aboutme" component={About} />
         </Switch>
       </BaseLayout>
     </Router>

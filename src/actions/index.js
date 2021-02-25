@@ -56,7 +56,7 @@ export const AddLikedDog = (dog) => {
 }
 
 export const RemoveLikedDog = (id) => {
-
+    console.log('removing ')
     return {
         type: "REMOVE_LIKED_DOG",
         id: id
