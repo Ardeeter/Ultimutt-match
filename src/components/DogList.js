@@ -1,9 +1,8 @@
 import React from 'react';
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { Dropdown, Button } from 'react-bootstrap'
 import DogCard from './DogCard';
 import ModalFilter from './ModalFilter';
-import { Dropdown, Button } from 'react-bootstrap'
-
 
 export default function DogList () {
 
@@ -12,6 +11,7 @@ export default function DogList () {
   const handleShow = () => setShow(true);
 
   const handleClick = () => {
+
       handleShow()     
   }
 
@@ -19,7 +19,6 @@ export default function DogList () {
   return (
     <>
     <div className="row d-flex justify-content-end mx-4 mt-3">
-      {/* <button className="sort-button btn mr-2" onClick={()=> handleClick()}>Sort</button> */}
       <Dropdown>
         <Dropdown.Toggle id="dropdown-basic" className="sort-button btn mr-2">
           Sort
@@ -33,7 +32,6 @@ export default function DogList () {
         </Dropdown.Menu>
       </Dropdown>
       <Button className="filter-button btn" onClick={()=> handleClick()}>Filter</Button>
-      {/* <button className="filter-button btn" onClick={()=> handleClick()}>  Filter  </button> */}
     </div>
     <ModalFilter show={show} handleClose={handleClose} handleShow={handleShow}/>
     <DogCard />

@@ -58,7 +58,7 @@ ReactDOM.render(
           <Route exact path="/" component={App} />
           <Route path="/dogs" component={DogList} />
           <Route path="/liked" component={LikedDogs} />
-          <Route path="/about" component={About} />
+          <Route path="/aboutme" component={About} />
         </Switch>
       </BaseLayout>
     </Router>

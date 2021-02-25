@@ -1,7 +1,8 @@
 import React from 'react'
 import { useDispatch, useSelector } from "react-redux";
-import { addDog, changeLocation, changeBreed, changeGender, changeAge, changeSize } from '../actions';
 import { useHistory } from "react-router-dom";
+import { addDog, changeLocation, changeBreed, changeGender, changeAge, changeSize } from '../actions';
+
 
 
 const Filter = ({close}) => {
@@ -57,7 +58,6 @@ const Filter = ({close}) => {
                         <option value="93111">93111</option>
                         <option value="93117">93117</option>
                     </select>
-                    {/* <button type="submit" className="btn btn-primary my-3 mr-4 submit-button border-0">Submit</button> */}
                 </div>
                 <div class="form-group">
                     <label className="filter-titles" for="exampleFormControlSelect2">Breed:</label>

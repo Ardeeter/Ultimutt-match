@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from 'react-router-dom';
 import DogModal from './DogModal';
+import { RemoveLikedDog } from '../actions/index'
 
 const Resources = () => {
 
@@ -20,12 +20,12 @@ const Resources = () => {
     handleShow()     
   }
 
-  const handleLike = (dog) => {
-    // console.log(likedDogs);
-    // if (!(dog.id in likedDogs)){
-    //     dispatch(AddLikedDog(dog))
-    // }
-}
+  
+
+  const handleUnlike = (dog) => {
+    dispatch(RemoveLikedDog(dog.id))
+  }
+
 
 
   return (
@@ -33,12 +33,14 @@ const Resources = () => {
        <div className="card-deck p-3 m-0">
       {likedDogs.map((dog) => {
           const email = `mailto:${dog.contact}`
+          const likedDog = likedDogs.find((d) => d.id === dog.id )
+          console.log(likedDog)
 
         return (
 
             <div className="card card-bg m-2" key={dog.id}>
                 <div className="card-img-top">
-                    <a className="heart btn" onClick={(e) => {handleLike(dog)}}><i className="fa fa-heart"></i></a>
+                  <span className="heart-clicked" onClick={(e) => {handleUnlike(dog)}}><i className="fa fa-heart"></i></span> 
                     <img src={dog.picture} alt="" className="card-img-top img-card" onClick={() => handleClick(dog)}/>
                 </div>
                 <div className="card-body" onClick={() => handleClick(dog)}>
@@ -49,7 +51,7 @@ const Resources = () => {
                     </div>
                 </div>
                 <div className="card-footer text-center">
-                    <small className="text-muted contact"><Link to={email}> {dog.contact} </Link></small>
+                    <small className="text-muted contact"><a href={email}> {dog.contact} </a></small>
                 </div>
             </div>
 

@@ -1,8 +1,4 @@
 body {
-    /* background-color: #ff0054; */
-    /* background-color: #ffbd00; */
-    /* background-color: #fbb017; */
-    /* background-color: #f8f7f7; */
     background-color: white;
     margin: 0;
     padding: 0;
@@ -19,14 +15,11 @@ body {
 }
 
 .dog-title {
-    /* color: #390099; */
     color: #ad7d38;
     font-size: 25px;
 }
 
 .dog-info {
-    /* color: #9e0059; */
-    /* color: #ff5c61; */
     color: #09344f;
     font-family: 'Gruppo', cursive;
 }
@@ -53,8 +46,7 @@ body {
 
 .size {
     font-size: 15px;
-    /* color: #ffbd00 */
-    /* color: #23d16c */
+
     color: #ca9238
 }
 
@@ -70,15 +62,9 @@ body {
 }
 
 .nav-logo {
-    /* color: #9e0059; */
     font-size: 25px;
-    /* color: #390099; */
     color: #3a6fa1;
 }
-
-/* .nav-logo:hover {
-    font-size: 35px
-} */
 
 .card-deck {
     height: 100%;
@@ -129,7 +115,9 @@ body {
     height: auto;
     width:100%;
     z-index: 1;
-    margin-top: 100px;
+    /* margin-top: 100px; */
+    position: absolute;
+    bottom: 0px;
 }
 
 .bg-white {
@@ -182,10 +170,12 @@ body {
 
     z-index: 1;
     font-size: 25px;
+
     text-shadow: -1px 1px 0 #ad7d38,
     1px 1px 0 #ad7d38,
-   1px -1px 0 #ad7d38,
-  -1px -1px 0 #ad7d38;
+    1px -1px 0 #ad7d38,
+    -1px -1px 0 #ad7d38;
+    
     
   }
 
@@ -197,24 +187,26 @@ body {
 
     z-index: 1;
     font-size: 25px;
+
     text-shadow: -1px 1px 0 #fae2bd,
     1px 1px 0 #fae2bd,
-   1px -1px 0 #fae2bd,
-  -1px -1px 0 #fae2bd;
+    1px -1px 0 #fae2bd,
+    -1px -1px 0 #fae2bd;
+    
     
   }
 
-.heart-unclicked:hover {
-    color: #ca9238
+@media (hover:hover) and (pointer:fine) {
+    .heart-unclicked:hover {
+        cursor: pointer;
+        color: #ca9238
+    }
+    
+    .heart-clicked:hover {
+        cursor: pointer;
+        color: #ca9238
+    }
 }
-
-.heart-clicked:hover {
-    color: #ca9238
-}
-
-/* .heart:focus{
-    color: #ca9238
-} */
 
 .footer-container {
     width: 100%;
@@ -244,10 +236,39 @@ body {
 
 .ft-con {
     z-index: 2;
+    /* position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px */
 }
 
 .app-container{
     z-index: 1;
     background-color: white;
+}
+
+.about-title {
+    font-size: 50px;
+    color: #ad7d38;
+    font-family: 'Hachi Maru Pop', cursive;
+}
+
+.about-text {
+    font-size: 25px;
+    color: black;
+    font-family: 'Gruppo', cursive;
+}
+
+.about-image {
+    height: 400px
+}
+
+.about-img-box {
+    background-color: #0b3e6d;
+}
+
+.about-img {
+    height: auto;
+    width: 100%
 }
 
