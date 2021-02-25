@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Resources from './components/Resources';
+import LikedDogs from './components/LikedDogs';
 import About from './components/About'
 import BaseLayout from './components/layout/BaseLayout'
+import  './styles.css'
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
-import reducer from './reducers/reducerTemplate'
+import reducer from './reducers/reducer'
 import App from './App';
+import DogList from './components/DogList'
 import {
   BrowserRouter as Router,
   Route, Switch
@@ -45,6 +47,7 @@ store.subscribe(()=>{
 
   saveToLocalStorage(store.getState());
 })
+
 //Provider hooks react to redux
 ReactDOM.render(
   <React.StrictMode>
@@ -53,7 +56,8 @@ ReactDOM.render(
       <BaseLayout>
         <Switch>
           <Route exact path="/" component={App} />
-          <Route path="/resources" component={Resources} />
+          <Route path="/dogs" component={DogList} />
+          <Route path="/liked" component={LikedDogs} />
           <Route path="/about" component={About} />
         </Switch>
       </BaseLayout>
