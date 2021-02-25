@@ -37,10 +37,9 @@ const Resources = () => {
           console.log(likedDog)
 
         return (
-
             <div className="card card-bg m-2" key={dog.id}>
                 <div className="card-img-top">
-                  <span className="heart-clicked" onClick={(e) => {handleUnlike(dog)}}><i className="fa fa-heart"></i></span> 
+                  <span className="heart-clicked" onClick={(e) => {handleUnlike(dog)}}><i className="fa fa-paw"></i></span> 
                     <img src={dog.picture} alt="" className="card-img-top img-card" onClick={() => handleClick(dog)}/>
                 </div>
                 <div className="card-body" onClick={() => handleClick(dog)}>

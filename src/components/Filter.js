@@ -62,7 +62,7 @@ const Filter = ({close}) => {
                 <div class="form-group">
                     <label className="filter-titles" for="exampleFormControlSelect2">Breed:</label>
                     <select multiple class="form-control" id="breed" placeholder="Select Breed" onChange={(e) => dispatch(changeBreed(e.target.value))}>
-                        <option value=" ">All</option>
+                        <option value="">All</option>
                         <option value="Cattle">Australian Cattle Dog</option>
                         <option value="Kelpie">Australian Kelpie</option>
                         <option value="Alaskan Malamute">Alaskan Malamute</option>
