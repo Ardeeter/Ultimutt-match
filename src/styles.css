@@ -272,3 +272,8 @@ body {
     width: 100%
 }
 
+.about-img-border {
+    border-color: #ca9238;
+    border: 1px
+}
+
